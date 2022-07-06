@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+
+  ::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #383838;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #4b9d5e;
+    border-radius: 999px;
+  }
+}
+
+body {
+  background-color: #181818;
+  background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
+  min-height: 100vh;
+}
+
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 700px;
+  padding: 50px 16px;
+}
+
+a {
+  text-decoration: none;
+}

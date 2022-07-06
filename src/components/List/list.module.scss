@@ -1,0 +1,22 @@
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.empty {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    text-align: center;
+    margin-top: 50px;
+
+    p {
+        font-size: 14px;
+        opacity: 0.5;
+    }
+}

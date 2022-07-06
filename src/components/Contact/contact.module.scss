@@ -1,0 +1,55 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: #383838;
+    color: white;
+    border-radius: 999px 300px 300px 999px;
+    overflow: hidden;
+    padding-right: 20px;
+    transition: 0.4s;
+
+    & > div {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    &:hover {
+        background: #525252;
+        .delete {
+            opacity: 1;
+        }
+    }
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+    
+    span {
+        opacity: 0.5;
+        font-size: 14px;
+    }
+}
+
+.delete {
+    background: none;
+    color: #fe6161;
+    border: none;
+    transition: 0.4s;
+    cursor: pointer;
+    opacity: 0;
+
+    &:hover {
+        transform: scale(1.3);
+    }
+}

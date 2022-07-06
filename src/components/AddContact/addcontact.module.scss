@@ -1,0 +1,56 @@
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+
+    button {
+        background: #4b9d5e;
+        border: none;
+        color: white;
+        padding: 10px 30px;
+        border-radius: 999px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        transition: 0.4s;
+        cursor: pointer;
+        justify-content: center;
+
+        &:hover {
+            background: #64c97c;
+        }
+
+        &.circle {
+            padding: 0px;
+            min-width: 40px;
+            height: 40px;
+            border-radius: 999px;
+        }
+    }
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    gap: 5px;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.credits {
+    text-align: center;
+    color: white;
+    font-size: 12px;
+
+    a, span {
+        font-weight: bold;
+        color: #4b9d5e;
+    }
+}
