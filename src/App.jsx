@@ -42,7 +42,7 @@ function App() {
   }
 
   const filteredContacts = contacts.filter((item) => {
-      return item.name.toLowerCase().startsWith(search.toLowerCase());
+      return item.name.toLowerCase().includes(search.toLowerCase());
   });
 
   return (
