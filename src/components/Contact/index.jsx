@@ -1,11 +1,12 @@
 import styles from './contact.module.scss'
 import { MdDeleteForever } from 'react-icons/md';
+import placeholderImg from '../../assets/placeholder_user.png';
 
 export function Contact(props) {
     return(
         <div className={styles.container}>
             <div>
-                <img src={props.contactData.avatar ?? "/src/assets/placeholder_user.png"} alt={props.contactData.name} />
+                <img src={props.contactData.avatar ?? placeholderImg} alt={props.contactData.name} />
                 <div className={styles.details}>
                     <strong>{props.contactData.name}</strong>
                     <span>{props.contactData.phone}</span>
