@@ -19,7 +19,7 @@ export function AddContact({ addContact }) {
             id: crypto.randomUUID(),
             name: name,
             phone: phone,
-            avatar: avatar
+            avatar: !avatar ? null : avatar
         })
         setAvatar("")
         setName("")
@@ -27,7 +27,7 @@ export function AddContact({ addContact }) {
     }
 
     function onChangeAvatar(event) {
-        setAvatar(event.target.value)
+        setAvatar(event.target.value.trim(""))
     }
 
     function onChangeName(event) {
@@ -57,9 +57,9 @@ export function AddContact({ addContact }) {
             </header>
             {isShowing && (
                 <form onSubmit={onSubmit}className={styles.form}>
-                    <Input placeholder='URL da foto' required onChange={onChangeAvatar} value={avatar}/>
-                    <Input placeholder='Nome completo' required onChange={onChangeName} value={name}/>
-                    <Input placeholder='Número' required onChange={onChangePhone} value={phone}/>
+                    <Input placeholder='URL da foto' onChange={onChangeAvatar} value={avatar}/>
+                    <Input placeholder='Nome completo *' required onChange={onChangeName} value={name}/>
+                    <Input placeholder='Número *' required onChange={onChangePhone} value={phone}/>
                     <button className={styles.circle}><MdAddCircle size={20}/></button>
                 </form>
             )}
