@@ -1,16 +1,19 @@
 import { Contact } from '../Contact'
 import styles from './list.module.scss'
 import { FaSadTear } from "react-icons/fa"
+import { useContacts } from '../../hooks/useContacts'
 
-export function List({ contacts , search, deleteContact }) {
+export function List() {
+    const { filteredContacts, search } = useContacts();
+
     return(
         <section className={styles.container}>
-            {contacts.map((item)=>{
+            {filteredContacts.map((item)=>{
                 return(
-                    <Contact key={item.id} contactData={item} deleteContact={deleteContact}/>
+                    <Contact key={item.id} contactData={item} />
                 )
             })}
-            {contacts.length <= 0 && (
+            {filteredContacts.length <= 0 && (
                 <div className={styles.empty}>
                     <FaSadTear size={50} />
                     <div>

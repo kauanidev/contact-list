@@ -2,12 +2,15 @@ import { Input } from '../Input'
 import styles from './addcontact.module.scss'
 import {MdPersonAddAlt1 , MdAddCircle , MdRemoveCircle} from 'react-icons/md'
 import { useState } from 'react'
+import { useContacts } from '../../hooks/useContacts'
 
-export function AddContact({ addContact }) {
+export function AddContact() {
     const [isShowing , setIsShowing] = useState(false)
     const [avatar , setAvatar] = useState("")
     const [name , setName] = useState("")
     const [phone , setPhone] = useState("")
+
+    const { addContact } = useContacts();
 
     function toggleForm() {
         setIsShowing(!isShowing);
